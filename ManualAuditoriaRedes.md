@@ -184,8 +184,8 @@ De este modo podremos saber donde tenemos vulnerabilidades y poder corregir las 
 
 ## Referencias y documentación oficial
 
-- __Página oficial de Nmap:__ [https://nmap.org/](https://nmap.org/)
-- __Nmap Reference Guide. Manual de referencia Nmap:__ [https://nmap.org/book/man.html](https://nmap.org/book/man.html)
-- __Nmap Network Scanning. Documentación:__[https://nmap.org/book/](https://nmap.org/book/)
-- __Kali Linux - Documentación oficial:__[https://www.kali.org/docs/](https://www.kali.org/docs/)
-- __INCIBE. Instituto Nacional de Ciberseguridad de España:__ [https://www.incibe.es/](https://www.incibe.es/)
+- Página oficial de Nmap: [https://nmap.org/](https://nmap.org/)
+- Nmap Reference Guide. Manual de referencia Nmap: [https://nmap.org/book/man.html](https://nmap.org/book/man.html)
+- Nmap Network Scanning. Documentación:[https://nmap.org/book/](https://nmap.org/book/)
+- Kali Linux - Documentación oficial:[https://www.kali.org/docs/](https://www.kali.org/docs/)
+- INCIBE. Instituto Nacional de Ciberseguridad de España: [https://www.incibe.es/](https://www.incibe.es/)
