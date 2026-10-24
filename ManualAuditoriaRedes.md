@@ -13,6 +13,7 @@
   - [Tabla de comandos más utilizados](#tabla-de-comandos-más-utilizados)
   - [Nmap desde terminal Kali](#nmap-desde-terminal-kali)
   - [Zenmap (nmap interfaz gŕafica)](#zenmap-nmap-interfaz-gŕafica)
+    - [Notas de Zenmap](#notas-de-zenmap)
   - [Conclusiones](#conclusiones)
   - [Referencias y documentación oficial](#referencias-y-documentación-oficial)
 
@@ -133,6 +134,19 @@ Similar a la terminal, simplemente que tenemos la ayuda de una interfaz gŕafica
 ![KaliGrafico.png](./imagenes/KaliGrafico.png)
 
 ---
+
+### Notas de Zenmap
+
+Zenmap nos permite seleccionar distintos perfiles predefinidios de escaneo que ejecutan combinaciones de parámetros de Nmap. Esto nos facilita mucho realizar auditorías sin necesidad de recordar todos los comandos.
+
+- Tabla de los distintos perfiles
+
+|Perfil|Descripción|
+|-|-|
+|Ping scan|Descubre equipos activos sin analizar sus puertos.|
+|Quick scan|Realiza un análisis rápido de los puertos más habituales.|
+|Regular scan|Ejecuta un escaneo estándar de los puertos del objetivo.|
+|Intense scan|Obtiene información más detallada sobre puertos y servicios.|
 
 ## Conclusiones
 
