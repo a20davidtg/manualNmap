@@ -10,6 +10,8 @@
   - [Pasos principales de la auditoría con NMAP](#pasos-principales-de-la-auditoría-con-nmap)
   - [Kali Linux](#kali-linux)
   - [Comprobando la red de Kali](#comprobando-la-red-de-kali)
+    - [Comprobación de IP](#comprobación-de-ip)
+    - [Comprobación puerta de enlace y tabla de rutas](#comprobación-puerta-de-enlace-y-tabla-de-rutas)
   - [Tabla de comandos más utilizados](#tabla-de-comandos-más-utilizados)
   - [Nmap desde terminal Kali](#nmap-desde-terminal-kali)
   - [Zenmap (nmap interfaz gŕafica)](#zenmap-nmap-interfaz-gŕafica)
@@ -63,7 +65,7 @@ Lo primero es ver que la ISO de Kali arranca correctamente y tenemos una IP dent
 
 ---
 
-**Comprobación del comando ```ip address```**
+### Comprobación de IP
 
 ```bash
 ┌──(kali㉿kali)-[~]
@@ -84,6 +86,33 @@ Lo primero es ver que la ISO de Kali arranca correctamente y tenemos una IP dent
 ┌──(kali㉿kali)-[~]
 └─$ 
 ```
+
+### Comprobación puerta de enlace y tabla de rutas
+
+Además de conocer nuestra dirección IP, es importante identificar la puerta de enlace (default gateway). Normalmente corresponde al router que permite la comunicación con otras redes. Para consultar la tabla de rutas utilizaremos el comando `ip route`
+
+__Salida línea de comandos:__
+
+```bash
+┌──(kali㉿kali)-[~]
+└─$ ip route
+default via 192.168.1.1 dev eth0 proto dhcp metric 100
+192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.130
+┌──(kali㉿kali)-[~]
+└─$
+```
+
+__En esta salida podemos identificar:__
+
+- `default via 192.168.1.1` Indica que la puerta de enlace predeterminada es el router con dirección IP 192.168.1.1.
+
+- `dev eth0` Identifica la interfaz de red utilizada.
+
+- `192.168.1.0/24` Representa la red local a la que está conectada Kali.
+
+- `src 192.168.1.130` Indica la dirección IP de origen utilizada por nuestra máquina.
+
+En este punto estamos en condiciones de tener un mayor conocimiento de la configuración de red del equipo antes de comenzar el escaneo con Nmap.
 
 ---
 
@@ -108,7 +137,7 @@ Estamos en condiciones de comenzar la auditoría, pues tenemos la IP 192.168.1.1
 
 ## Nmap desde terminal Kali
 
-Oculto ciertos datos, como la **MAC o nombre DNS** por seguridad.
+Oculto ciertos datos, como la __MAC o nombre DNS__ por seguridad.
 
 ```bash
 ─$ nmap -sn 192.168.1.0/24
@@ -150,13 +179,13 @@ Zenmap nos permite seleccionar distintos perfiles predefinidios de escaneo que e
 
 ## Conclusiones
 
-En plena era de la digitalización, con la eclosión de redes informáticas en todo tipo de empresas y hogares, **la seguridad de las mismas es un tema fundamental**. Con Kali Linux podemos revisar nuestras redes de un modo bastante fácil e intuitivo, sobretodo desde el entorno gŕafico.
+En plena era de la digitalización, con la eclosión de redes informáticas en todo tipo de empresas y hogares, __la seguridad de las mismas es un tema fundamental__. Con Kali Linux podemos revisar nuestras redes de un modo bastante fácil e intuitivo, sobretodo desde el entorno gŕafico.
 De este modo podremos saber donde tenemos vulnerabilidades y poder corregir las mismas.
 
 ## Referencias y documentación oficial
 
-- **Página oficial de Nmap:** [https://nmap.org/](https://nmap.org/)
-- **Nmap Reference Guide. Manual de referencia Nmap:** [https://nmap.org/book/man.html](https://nmap.org/book/man.html)
-- **Nmap Network Scanning. Documentación:** [https://nmap.org/book/](https://nmap.org/book/)
-- **Kali Linux - Documentación oficial:** [https://www.kali.org/docs/](https://www.kali.org/docs/)
-- **INCIBE. Instituto Nacional de Ciberseguridad de España:** [https://www.incibe.es/](https://www.incibe.es/)
+- __Página oficial de Nmap:__ [https://nmap.org/](https://nmap.org/)
+- __Nmap Reference Guide. Manual de referencia Nmap:__ [https://nmap.org/book/man.html](https://nmap.org/book/man.html)
+- __Nmap Network Scanning. Documentación:__[https://nmap.org/book/](https://nmap.org/book/)
+- __Kali Linux - Documentación oficial:__[https://www.kali.org/docs/](https://www.kali.org/docs/)
+- __INCIBE. Instituto Nacional de Ciberseguridad de España:__ [https://www.incibe.es/](https://www.incibe.es/)
