@@ -194,3 +194,8 @@ De este modo podremos saber donde tenemos vulnerabilidades y poder corregir las 
 ## Información del proyecto
 Esta documentación se ha elaborado utilizando Markdown.
 El control de versiones se realiza mediante Git y el repositorio remoto se encuentra alojado en GitHub.
+
+## Próximas mejoras.
+1. Análisis avanzado mediante scripts para detectar posibles vulnerabilidades, configuraciones inseguras y servicios expuestos.
+2. Generación y comparación de informes en formatos XML, HTML o texto para poder documentar los dispositivos detectados y comparar los cambios en la red.
+3. Automatización de auditorías periódicas con un sencillo script Bash que ejecute los escaneos de Nmap, almacene los resultados y permita realizar un seguimiento de los nuevos dispositivos y puertos abiertos.
