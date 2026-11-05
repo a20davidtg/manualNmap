@@ -18,6 +18,7 @@
     - [Notas de Zenmap](#notas-de-zenmap)
   - [Conclusiones](#conclusiones)
   - [Referencias y documentación oficial](#referencias-y-documentación-oficial)
+  - [Información del proyecto](#información-del-proyecto)
 
 ## Introducción
 
@@ -189,3 +190,7 @@ De este modo podremos saber donde tenemos vulnerabilidades y poder corregir las 
 - Nmap Network Scanning. Documentación:[https://nmap.org/book/](https://nmap.org/book/)
 - Kali Linux - Documentación oficial:[https://www.kali.org/docs/](https://www.kali.org/docs/)
 - INCIBE. Instituto Nacional de Ciberseguridad de España: [https://www.incibe.es/](https://www.incibe.es/)
+
+## Información del proyecto
+Esta documentación se ha elaborado utilizando Markdown.
+El control de versiones se realiza mediante Git y el repositorio remoto se encuentra alojado en GitHub.
